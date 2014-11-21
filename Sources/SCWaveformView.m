@@ -278,10 +278,10 @@ void SCRenderPixelWaveformInContext(CGContextRef context, float halfGraphHeight,
     _progressImageView.frame = bs;
     
     // If the size is now bigger than the generated images
-    if (bs.size.width > self.generatedNormalImage.size.width) {
-        self.generatedNormalImage = nil;
-        self.generatedProgressImage = nil;
-    }
+    //if (bs.size.width > self.generatedNormalImage.size.width) {
+    //    self.generatedNormalImage = nil;
+    //    self.generatedProgressImage = nil;
+    //}
     
     [self applyProgressToSubviews];
 }
