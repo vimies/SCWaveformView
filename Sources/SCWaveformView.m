@@ -90,7 +90,8 @@ void SCRenderPixelWaveformInContext(CGContextRef context, float halfGraphHeight,
         return;
     }
     
-    CGFloat pixelRatio = [UIScreen mainScreen].scale;
+    //CGFloat pixelRatio = [UIScreen mainScreen].scale;
+    CGFloat pixelRatio = 1.0;
     size.width *= pixelRatio;
     size.height *= pixelRatio;
     
@@ -200,7 +201,8 @@ void SCRenderPixelWaveformInContext(CGContextRef context, float halfGraphHeight,
 
 + (UIImage*)generateWaveformImage:(AVAsset *)asset withColor:(UIColor *)color andSize:(CGSize)size antialiasingEnabled:(BOOL)antialiasingEnabled
 {
-    CGFloat ratio = [UIScreen mainScreen].scale;
+    //CGFloat ratio = [UIScreen mainScreen].scale;
+    CGFloat ratio = 1.0;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width * ratio, size.height * ratio), NO, 1);
     
     [SCWaveformView renderWaveformInContext:UIGraphicsGetCurrentContext() asset:asset withColor:color andSize:size antialiasingEnabled:antialiasingEnabled];
